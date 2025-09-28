@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planilha de Treinamento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-active {
+            background-color: #1d4ed8; /* blue-700 */
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .tab-inactive {
+            background-color: #e5e7eb; /* gray-200 */
+            color: #374151; /* gray-700 */
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-2 sm:p-6 md:p-8">
+
+    <div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg p-4 sm:p-8">
+        
+        <header class="text-center mb-8 border-b pb-6 border-gray-200">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800">Planilha de Treino</h1>
+        </header>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 text-center">
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <h3 class="font-semibold text-gray-500 text-sm">FASE</h3>
+                <p class="text-lg font-bold text-gray-800 mt-1">Hipertrofia</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <h3 class="font-semibold text-gray-500 text-sm">N° DE TREINOS/SEMANA</h3>
+                <p class="text-lg font-bold text-gray-800 mt-1">2</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <h3 class="font-semibold text-gray-500 text-sm">LOCAL DO TREINO</h3>
+                <p class="text-lg font-bold text-gray-800 mt-1">Academia</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                <h3 class="font-semibold text-gray-500 text-sm">FOCO</h3>
+                <p class="text-lg font-bold text-gray-800 mt-1">Força e Resistência</p>
+            </div>
+        </div>
+
+        <div class="overflow-x-auto no-scrollbar pb-4 mb-8">
+            <div id="tab-buttons" class="flex justify-start sm:justify-center gap-2 sm:gap-4 w-max sm:w-auto mx-auto">
+                <button data-tab="treinoA" class="tab-button text-sm sm:text-base font-bold py-2 px-4 rounded-lg transition-all duration-300 tab-active">Treino A</button>
+                <button data-tab="treinoB" class="tab-button text-sm sm:text-base font-bold py-2 px-4 rounded-lg transition-all duration-300 tab-inactive">Treino B</button>
+            </div>
+        </div>
+
+        <div id="tab-content">
+            <!-- WORKOUT A CONTENT -->
+            <div id="treinoA" class="tab-pane">
+                <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Treino A: Costas e Bíceps</h2>
+                <section class="mb-6 p-5 rounded-xl bg-blue-50 border border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Mobilidade</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-blue-900 uppercase bg-blue-100"><tr><th scope="col" class="px-6 py-3 rounded-tl-lg w-2/5">Exercício</th><th scope="col" class="px-2 py-3 text-center">Séries</th><th scope="col" class="px-2 py-3 text-center">Repetições</th><th scope="col" class="px-2 py-3 text-center">Velocidade</th><th scope="col" class="px-4 py-3 text-center">Téc. Avançada</th><th scope="col" class="px-2 py-3 text-center rounded-tr-lg">Descanso</th></tr></thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-blue-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/ftXrvDumREs" target="_blank" class="text-blue-600 hover:text-blue-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Lumbar Extension to Flexion Quadruped</span></td><td class="px-2 py-4 text-center">1</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Nao</td><td class="px-2 py-4 text-center">0s</td></tr>
+                                <tr class="bg-white border-b border-blue-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/4uCJvJgw0tU" target="_blank" class="text-blue-600 hover:text-blue-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Quadruped Oblique Crunch</span></td><td class="px-2 py-4 text-center">1</td><td class="px-2 py-4 text-center">8</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Nao</td><td class="px-2 py-4 text-center">0s</td></tr>
+                                <tr class="bg-white"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/UMkwulwK-Cs" target="_blank" class="text-blue-600 hover:text-blue-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Downward Dog to Overhead Press</span></td><td class="px-2 py-4 text-center">1</td><td class="px-2 py-4 text-center">6</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Nao</td><td class="px-2 py-4 text-center">0s</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="p-5 rounded-xl bg-orange-50 border border-orange-200">
+                    <h3 class="text-xl font-bold text-orange-800 mb-4">TREINO PRINCIPAL</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-orange-900 uppercase bg-orange-100"><tr><th scope="col" class="px-6 py-3 rounded-tl-lg w-2/5">Exercício</th><th scope="col" class="px-2 py-3 text-center">Séries</th><th scope="col" class="px-2 py-3 text-center">Repetições</th><th scope="col" class="px-2 py-3 text-center">Velocidade</th><th scope="col" class="px-4 py-3 text-center">Téc. Avançada</th><th scope="col" class="px-2 py-3 text-center rounded-tr-lg">Descanso</th></tr></thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/gLcoYCDDtt8" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Pull Up Underhand Grip</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">8 - 10</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Não</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                <tr class="bg-white border-b border-orange-100"><td colspan="6" class="px-6 py-2 text-xs text-gray-500"><b class="text-gray-600">Observação:</b> Fazer bem concentrado</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtube.com/shorts/fY1zHKwOY7k?feature=share" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Face Pull</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">12</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Bi-set</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                <tr class="bg-white border-b border-orange-100"><td colspan="6" class="px-6 py-2 text-xs text-gray-500"><b class="text-gray-600">Observação:</b> Fechar a Escapula quando realizar o movimento para tras</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtube.com/shorts/exv_jUXP5PE?feature=share" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Pulldown com Corda</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">12</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Bi-set</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                <tr class="bg-white border-b border-orange-100"><td colspan="6" class="px-6 py-2 text-xs text-gray-500"><b class="text-gray-600">Observação:</b> Fechar a Escapula quando realizar o movimento para baixo. Realizar os 2 exercicios juntos. e depois descansar</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/uWJpy5qRtUw" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Remada Sentada Pegada Pronada</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">14</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Não</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/EpjktwfjXA0" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Rosca Scott Barra w</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Não</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                <tr class="bg-white border-b border-orange-100"><td colspan="6" class="px-6 py-2 text-xs text-gray-500"><b class="text-gray-600">Observação:</b> Se não tiver a barra W, fazer com a normal</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/sQZ_CXJf4Pk" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Rosca Direta com Halter Banco 45</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10 - 12</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Não</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                <tr class="bg-white border-b border-orange-100"><td colspan="6" class="px-6 py-2 text-xs text-gray-500"><b class="text-gray-600">Observação:</b> Fazer movimento concentrado</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/dTEouuTx608" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Straight Leg Lowering Supine Alternating</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">12</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Bi-set</td><td class="px-2 py-4 text-center">2 min</td></tr>
+
+                                <tr class="bg-white"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtube.com/shorts/eC97uSVVY-c?feature=share" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Abdominal Infra Paralelas com Pernas Estendidas</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Bi-set</td><td class="px-2 py-4 text-center">2 min</td></tr>
+                                <tr class="bg-white border-b border-orange-100"><td colspan="6" class="px-6 py-2 text-xs text-gray-500"><b class="text-gray-600">Observação:</b> Se estiver difícil pode flexionar as pernas. se não tiver a paralela, fazer no braço da esteira, ou segurando na barra suspenso podendo flexionar a perna</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+            <!-- WORKOUT B CONTENT -->
+            <div id="treinoB" class="tab-pane hidden">
+                <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Treino B: Peito e Tríceps</h2>
+                <section class="mb-6 p-5 rounded-xl bg-blue-50 border border-blue-200">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">Mobilidade</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-blue-900 uppercase bg-blue-100"><tr><th scope="col" class="px-6 py-3 rounded-tl-lg w-2/5">Exercício</th><th scope="col" class="px-2 py-3 text-center">Séries</th><th scope="col" class="px-2 py-3 text-center">Repetições</th><th scope="col" class="px-2 py-3 text-center">Velocidade</th><th scope="col" class="px-4 py-3 text-center">Téc. Avançada</th><th scope="col" class="px-2 py-3 text-center rounded-tr-lg">Descanso</th></tr></thead>
+                           <tbody>
+                                <tr class="bg-white border-b border-blue-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/ftXrvDumREs" target="_blank" class="text-blue-600 hover:text-blue-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Lumbar Extension to Flexion Quadruped</span></td><td class="px-2 py-4 text-center">1</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Nao</td><td class="px-2 py-4 text-center">0s</td></tr>
+                                <tr class="bg-white border-b border-blue-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/4uCJvJgw0tU" target="_blank" class="text-blue-600 hover:text-blue-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Quadruped Oblique Crunch</span></td><td class="px-2 py-4 text-center">1</td><td class="px-2 py-4 text-center">8</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Nao</td><td class="px-2 py-4 text-center">0s</td></tr>
+                                <tr class="bg-white"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/UMkwulwK-Cs" target="_blank" class="text-blue-600 hover:text-blue-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Downward Dog to Overhead Press</span></td><td class="px-2 py-4 text-center">1</td><td class="px-2 py-4 text-center">6</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Nao</td><td class="px-2 py-4 text-center">0s</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="p-5 rounded-xl bg-orange-50 border border-orange-200">
+                    <h3 class="text-xl font-bold text-orange-800 mb-4">TREINO PRINCIPAL</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm text-left text-gray-600">
+                            <thead class="text-xs text-orange-900 uppercase bg-orange-100"><tr><th scope="col" class="px-6 py-3 rounded-tl-lg w-2/5">Exercício</th><th scope="col" class="px-2 py-3 text-center">Séries</th><th scope="col" class="px-2 py-3 text-center">Repetições</th><th scope="col" class="px-2 py-3 text-center">Velocidade</th><th scope="col" class="px-4 py-3 text-center">Téc. Avançada</th><th scope="col" class="px-2 py-3 text-center rounded-tr-lg">Descanso</th></tr></thead>
+                            <tbody>
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/Ag-OvbAuhfk" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Bench Press</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">12</td><td class="px-2 py-4 text-center">normal</td><td class="px-4 py-4 text-center">nao</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/0unc9DASWSY" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Supino Inclinado com Barra</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">normal</td><td class="px-4 py-4 text-center">Bi-Set</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtube.com/shorts/MJ6OmXLL1FU?feature=share" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Supino Inclinado com Halteres</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">8</td><td class="px-2 py-4 text-center">normal</td><td class="px-4 py-4 text-center">Bi-Set</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                <tr class="bg-white border-b border-orange-100"><td colspan="6" class="px-6 py-2 text-xs text-gray-500"><b class="text-gray-600">Observação:</b> Se conseguir pode fazer até a falha</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/D0CMn7reLLM" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Peck Deck</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">14</td><td class="px-2 py-4 text-center">normal</td><td class="px-4 py-4 text-center">nao</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                                
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtube.com/shorts/q07ZLVzCf60?feature=share" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Triceps Paralela Máquina Pegada Pronada</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">normal</td><td class="px-4 py-4 text-center">Bi-Set</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+                               
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtube.com/shorts/Nda-LYMpI1U?feature=share" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Triceps Coice Unilateral na Polia Baixa</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">normal</td><td class="px-4 py-4 text-center">Bi-Set</td><td class="px-2 py-4 text-center">2 a 3 min</td></tr>
+
+                                <tr class="bg-white border-b border-orange-100"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtube.com/shorts/KaXY_H92FEY?feature=share" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Abdominal com Rodinha</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Bi-set</td><td class="px-2 py-4 text-center">2 min</td></tr>
+                                
+                                <tr class="bg-white"><td class="px-6 py-4 font-medium text-gray-900 flex items-center gap-3"><a href="https://youtu.be/EWGzoj75EAQ" target="_blank" class="text-orange-600 hover:text-orange-800" title="Ver vídeo do exercício"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></a><span>Lateral Trunk Flexion</span></td><td class="px-2 py-4 text-center">3</td><td class="px-2 py-4 text-center">10</td><td class="px-2 py-4 text-center">Normal</td><td class="px-4 py-4 text-center">Bi-set</td><td class="px-2 py-4 text-center">2 min</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.dataset.tab;
+                    
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('tab-active');
+                        btn.classList.add('tab-inactive');
+                    });
+                    button.classList.add('tab-active');
+                    button.classList.remove('tab-inactive');
+
+                    tabPanes.forEach(pane => {
+                        if (pane.id === targetTab) {
+                            pane.classList.remove('hidden');
+                        } else {
+                            pane.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+            document.querySelector('.tab-button[data-tab="treinoA"]').click();
+        });
+    </script>
+</body>
+</html>
